@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: start;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f8f8;
+  color: #1f1f1f;
+  transition: all 0.4s ease;
+}
+
+/* NAV */
+nav {
+  background-color: #d0f0df;
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-container li {
+  transition: transform 0.2s;
+}
+
+.nav-container li:hover {
+  transform: translateY(-2px);
+}
+
+.nav-container .active a {
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+}
+
+/* HERO SECTION */
+.section {
+  padding: 6rem 2rem;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.home-hero .hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+.hero-image img {
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+@media (max-width: 768px) {
+  .home-hero .hero-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    text-align: left;
+  }
+}
+
+.hero-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a668ff, #00ffa4);
+  padding: 4px;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+}
+
+.hero-text {
+  padding-left: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.socials li a {
+  font-size: 1.5rem;
+  color: inherit;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socials li a:hover {
+  color: #8D53FF;
+  transform: translateY(-3px);
+}
+
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, #00ffa4, #a668ff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hand wave animation */
+.wave {
+  display: inline-block;
+  animation: wave 2.5s infinite;
+  transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.hero-info {
+  list-style: none;
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.hero-info li {
+  margin: 0.25rem 0;
+  transition: transform 0.3s ease;
+}
+
+.hero-info li:hover {
+  transform: translateY(-3px);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1.75rem;
+  margin-top: 1rem;
+}
+
+.social-icons li a {
+  color: #1f1f1f;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.social-icons li a:hover {
+  color: #70c1b3;
+  transform: translateY(-2px);
+}
+
+/* DARK MODE */
+body.dark-mode {
+  background-color: #1f1f1f;
+  color: #f8f8f8;
+}
+
+body.dark-mode nav {
+  background-color: #222;
+}
+
+body.dark-mode a,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode li {
+  color: #f8f8f8;
+}
+
+body.dark-mode .nav-container .active a {
+  border-bottom: 2px solid #f8f8f8;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}
