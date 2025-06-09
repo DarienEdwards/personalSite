@@ -15,9 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   navLinks.forEach(link => {
     link.addEventListener('click', e => {
-      if (link.getAttribute('href').startsWith("#")) {
+      const href = link.getAttribute('href');
+      if (href && href.startsWith('#') && href.length > 1) {
         e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
+        const target = document.querySelector(href);
         if (target) {
           target.scrollIntoView({ behavior: 'smooth' });
         }
