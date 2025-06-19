@@ -239,3 +239,16 @@ footer {
   font-size: 0.9rem;
   color: #666;
 }
+
+/* CONTACT SECTION */
+.email-link {
+  color: #8D53FF;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.email-link:hover {
+  color: #00ffa4;
+  text-decoration: underline;
+}
